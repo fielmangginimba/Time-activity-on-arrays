@@ -1,0 +1,39 @@
+//C simple login program where the user inputs ID # and PIN.
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+    int account [3][2];
+    int user, password;
+
+    // Declaration account 1 to 3
+    account[0][0] = 2001105287;  //ID Number
+    account[0][1] = 12345;       //PIN
+
+    account[1][0] = 123456789;   //ID Number
+    account[1][1] = 987654321;   //PIN
+
+    account[2][0] = 246810;      //ID Number
+    account[2][1] = 108642;      //PIN
+
+    // Inputtin ID Number and PIN
+    printf("Enter ID Number: ");
+    scanf("%d", &user);
+    printf("Enter PIN: ");
+    scanf("%d", &password);
+
+    // Checking account to successfully
+    if(user == account[0][0] && password == account[0][1]) {
+        printf("\nYou have successfully logged in\n");
+        printf("ID#: %d", account[0][0]);
+    } else if (user == account[1][0] && password == account[1][1]) {
+        printf("\nYou have successfully logged in\n");
+        printf("ID#: %d", account[1][0]);
+    } else if (user == account[2][0] && password == account[2][1]) {
+        printf("\nYou have successfully logged in\n");
+        printf("ID#: %d", account[2][0]);
+    } else {
+        printf("\n Invalid ID/PIN!");
+    }
+
+    return 0;
+}
